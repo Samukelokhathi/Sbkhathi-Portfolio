@@ -1,27 +1,28 @@
-// ...existing code...
-import { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Tooltip } from "react-tooltip";
-import { dockApps } from "#constants/index.js";
 import gsap from "gsap";
-// ...existing code...
+
+import { dockApps } from "#constants/index.js";
+import useWindowStore from "#store/window.js";
+import { useGSAP } from "@gsap/react";
 
 const Dock = () => {
+  const { openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const dock = dockRef.current;
     if (!dock) return;
 
-    const iconEls = dock.querySelectorAll(".dock-icon");
+    const icons = dock.querySelectorAll(".dock-icon");
 
     const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
 
-      iconEls.forEach((icon) => {
+      icons.forEach((icon) => {
         const { left: iconLeft, width } = icon.getBoundingClientRect();
         const center = iconLeft - left + width / 2;
         const distance = Math.abs(mouseX - center);
-
         const intensity = Math.exp(-(distance ** 2) / 2000);
 
         gsap.to(icon, {
@@ -39,7 +40,7 @@ const Dock = () => {
     };
 
     const resetIcons = () => {
-      iconEls.forEach((icon) => {
+      icons.forEach((icon) => {
         gsap.to(icon, {
           scale: 1,
           y: 0,
@@ -59,7 +60,20 @@ const Dock = () => {
   }, []);
 
   const toggleApp = (app) => {
-    console.warn("toggleApp:", app);
+    if (!app.canOpen) return;
+
+    const window = windows?.[app.id];
+
+    if (!window) {
+      console.error(`Window not found fro app: ${app.id}`);
+      return;
+    }
+
+    if (window.isOpen) {
+      closeWindow(app.id);
+    } else {
+      openWindow(app.id);
+    }
   };
 
   return (
@@ -94,4 +108,3 @@ const Dock = () => {
 };
 
 export default Dock;
-// ...existing code...
