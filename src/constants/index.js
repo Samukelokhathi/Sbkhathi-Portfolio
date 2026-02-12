@@ -215,7 +215,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -223,7 +223,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -237,7 +237,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -246,7 +246,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -255,7 +255,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
@@ -268,7 +268,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -276,7 +276,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -290,7 +290,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -299,7 +299,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -308,7 +308,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
@@ -321,7 +321,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -329,7 +329,7 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -343,7 +343,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -352,7 +352,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -361,7 +361,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
@@ -382,7 +382,7 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "me.png",
+      name: "",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
@@ -391,7 +391,7 @@ const ABOUT_LOCATION = {
     },
     {
       id: 2,
-      name: "casual-me.png",
+      name: "",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
@@ -400,7 +400,7 @@ const ABOUT_LOCATION = {
     },
     {
       id: 3,
-      name: "conference-me.png",
+      name: "",
       icon: "/images/image.png",
       kind: "file",
       fileType: "img",
