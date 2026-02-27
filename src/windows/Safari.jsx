@@ -9,7 +9,9 @@ import {
   Share,
   Plus,
   Copy,
+  MoveRight,
 } from "lucide-react";
+import { blogPosts } from "../constants/index.js";
 
 const Safari = () => {
   return (
@@ -42,9 +44,25 @@ const Safari = () => {
           <Copy className="icon" />
         </div>
       </div>
+
       <div className="blog">
-        <h2>Developer Blog page Comming Soon</h2>
-        <div></div>
+        <div className="space-y-8">
+          {blogPosts.map(({ id, image, title, date, link }) => (
+            <div key={id} className="blog-post">
+              <div className="image w-100% h-100%">
+                <img src={image} alt={title} />
+              </div>
+
+              <div className="content">
+                <p>{date}</p>
+                <h3>{title}</h3>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  Check out the full post <MoveRight className="icon-hover" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

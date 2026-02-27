@@ -61,6 +61,7 @@ const Contact = () => {
                 name="first_name"
                 className="w-full border rounded p-2"
                 required
+                placeholder="First Name"
               />
             </div>
             <div className="flex-1">
